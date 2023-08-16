@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
             if (user) {
                 setUserId(user);
                 setIsAuthenticated(true);
-                return "Login Successful";
+                res.status(200);
             }
         } catch (error) {
             console.error("Login failed:", error);
