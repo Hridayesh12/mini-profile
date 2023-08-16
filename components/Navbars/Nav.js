@@ -3,7 +3,6 @@
 import React from "react";
 import { useState } from "react";
 // import Avatar from "../../../public/avatar.png";
-import Image from "next/image";
 import Link from "next/link";
 
 const Nav = () => {
@@ -33,12 +32,12 @@ const Nav = () => {
                                 : ""} */}
                         </h6>
                     </div>
-                    `&nbsp;``&nbsp;`
+                    &nbsp;&nbsp;
                     <button
                         className="flex items-center"
                         onClick={() => setIsOpen(!isOpen)}
                     >
-                        <Image
+                        <img
                             src='https://tse1.mm.bing.net/th?id=OIP.25iSkbJTm4F-Rq0g1JR8NgHaHa&pid=Api&P=0&h=180'
                             className="rounded-full border-2 scale-110"
                             alt="avatar"

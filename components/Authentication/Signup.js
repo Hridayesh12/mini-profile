@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
 import api from '../../contexts/adapter';
-import Image from 'next/image';
 function SignUp() {
     const router = useRouter();
     const [firstname, setFName] = useState('');
@@ -85,7 +84,7 @@ function SignUp() {
         <div className='bg-gray-100 min-h-screen flex items-center justify-center'>
             <div className=' bg-violet-200 flex rounded-2xl shadow-lg max-w-3xl p-4'>
                 <div className='w-1/2 sm:block hidden'>
-                    <Image
+                    <img
                         className='rounded-2xl'
                         src={`/signup.jpg`}
                         alt={`logo`}
@@ -143,7 +142,7 @@ function SignUp() {
                         < hr className='border-violet-500' /><p className='text-center text-sm'>OR</p>< hr className='border-violet-500' />
                     </div>
                     <div className='mt-1 text-xs flex justify-between items-center'>
-                        <p className='text-xs'>Already Have An Account ?`&nbsp;`</p>
+                        <p className='text-xs'>Already Have An Account ?&nbsp;</p>
                         <button className='py-2 px-5 bg-white border rounded-xl cursor-pointer hover:bg-violet-300'
                             onClick={() => router.back()}>Login</button>
                     </div>

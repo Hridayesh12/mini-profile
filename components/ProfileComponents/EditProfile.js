@@ -1,7 +1,6 @@
 import { useState } from "react";
 import api from "../../contexts/adapter";
 import Swal from "sweetalert2";
-import Image from "next/image";
 const EditProfile = ({ userInfo, edit, setEdit, setUserInfo }) => {
     // console.log(userInfo);
     const [disableBtn, setdisableBtn] = useState(false);
@@ -43,7 +42,7 @@ const EditProfile = ({ userInfo, edit, setEdit, setUserInfo }) => {
                 <div className='w-full flex flex-col px-3'>
                     <div className='flex flex-wrap flex-col-reverse md:flex-row items-center justify-around mb-5'>
                         <div className="w-full md:flex-1 mt-1 flex items-center  justify-between relative text-black">
-                            <Image
+                            <img
                                 className="rounded-full w-[100px] h-[100px] mr-2"
                                 src={userInfo?.pic ? `${userInfo?.pic}` : 'https://tse1.mm.bing.net/th?id=OIP.25iSkbJTm4F-Rq0g1JR8NgHaHa&pid=Api&P=0&h=180'}
                                 alt="profilePic"
@@ -54,7 +53,7 @@ const EditProfile = ({ userInfo, edit, setEdit, setUserInfo }) => {
                                 <input
                                     className="absolute cursor-pointer top-0 left-0 scale-70 opacity-0"
                                     type="file"
-                                    accept="image/*"
+                                    accept="img/*"
                                     onChange={handlePhotoInputs}
                                 />
                             </div>
@@ -206,13 +205,13 @@ const EditProfile = ({ userInfo, edit, setEdit, setUserInfo }) => {
                                         </div>
                                         <div className="flex flex-col lg:flex-row">
                                             <div className="w-full flex flex-row items-center justify-between lg:justify-around flex-wrap mb-2">
-                                                <h3 className="">From `&nbsp;`:`&nbsp;`</h3>
+                                                <h3 className="">From &nbsp;:&nbsp;</h3>
                                                 <input type='month' placeholder="From" value={education.start_year} className="border-2 border-gray-400 rounded-lg p-1"
                                                     onChange={(e) => { setUserInfo({ ...userInfo, ...userInfo, education: userInfo?.education?.map((education, i) => i === index ? { ...education, start_year: e.target.value } : education) }) }}
                                                 />
                                             </div>
                                             <div className="w-full flex flex-row items-center justify-between lg:justify-around flex-wrap mb-2 ">
-                                                <h3 className="">To `&nbsp;`:`&nbsp;`</h3>
+                                                <h3 className="">To &nbsp;:&nbsp;</h3>
                                                 <input type='month' placeholder="To" value={education.end_year} className="border-2 border-gray-400 rounded-lg p-1"
                                                     onChange={(e) => { setUserInfo({ ...userInfo, ...userInfo, education: userInfo?.education?.map((education, i) => i === index ? { ...education, end_year: e.target.value } : education) }) }}
                                                 />

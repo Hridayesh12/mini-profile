@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import api from '../contexts/adapter';
 import { useAuth } from '../contexts/AuthContext';
-import Image from 'next/image';
 const Connections = () => {
     const AuthData = useAuth();
     const userId = AuthData.userId;
@@ -110,7 +109,7 @@ const Connections = () => {
                         return (
                             <div key={index} className='p-5 flex flex-row flex-wrap justify-between items-center border-2 border-slate-300 rounded-lg'>
                                 <div className='flex flex-col items-start justify-center'>
-                                    <h3 className="font-md text-gray-700 font-bold text-indigo-800 mb-3">{item?.firstname}`&nbsp;`{item?.lastname}</h3>
+                                    <h3 className="font-md text-gray-700 font-bold text-indigo-800 mb-3">{item?.firstname}&nbsp;{item?.lastname}</h3>
                                     <h3 className="font-md text-gray-700 font-medium mb-3">{item?.email}</h3>
                                     <h3 className="font-md text-gray-700 font-medium mb-3">{item?.phone}</h3>
                                     <button className='w-full bg-violet-900 hover:bg-violet-500 rounded-xl text-white py-2'
@@ -142,7 +141,7 @@ const Connections = () => {
                                     item?._id === userId ? null :
                                         <div key={index} className='p-5 flex flex-row flex-wrap justify-between items-center border-2 border-slate-300 rounded-lg'>
                                             <div className='flex flex-col items-start justify-center'>
-                                                <h3 className="font-md text-gray-700 font-bold text-indigo-800 mb-3">{item?.firstname}`&nbsp;`{item?.lastname}</h3>
+                                                <h3 className="font-md text-gray-700 font-bold text-indigo-800 mb-3">{item?.firstname}&nbsp;{item?.lastname}</h3>
                                                 <h3 className="font-md text-gray-700 font-medium mb-3">{item?.email}</h3>
                                                 <h3 className="font-md text-gray-700 font-medium mb-3">{item?.phone}</h3>
                                                 <button className='w-full bg-violet-900 hover:bg-violet-500 rounded-xl text-white py-2'

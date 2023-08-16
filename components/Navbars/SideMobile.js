@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useAuth } from "../../contexts/AuthContext";
 // import a from "next/a";
 const SideMobile = () => {
@@ -38,12 +37,12 @@ const SideMobile = () => {
 
                     </button>
                     <div className="flex flex-row items-center">
-                        `&nbsp;``&nbsp;`
+                        &nbsp;&nbsp;
                         <button
                             className="flex items-center"
                             onClick={() => setIsOpen(!isOpen)}
                         >
-                            <Image
+                            <img
                                 src='https://tse1.mm.bing.net/th?id=OIP.25iSkbJTm4F-Rq0g1JR8NgHaHa&pid=Api&P=0&h=180'
                                 className="rounded-full border-2 scale-110"
                                 alt="avatar"
@@ -142,7 +141,7 @@ const SideMobile = () => {
                                     clipRule="evenodd"
                                 />
                             </svg>
-                            `&nbsp;``&nbsp;` Log Out
+                            &nbsp;&nbsp; Log Out
                         </div>
                     </Link>
                 </aside>
