@@ -35,7 +35,6 @@ const AuthProvider = ({ children }) => {
         },
         setUserId,
         setIsAuthenticated,
-        login,
         logout,
     };
 
