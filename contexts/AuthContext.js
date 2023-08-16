@@ -21,9 +21,10 @@ const AuthProvider = ({ children }) => {
         }
     };
 
-    const login = async () => {
+    const login = async (body) => {
         try {
-            const response = await api.get("/auth/user_data");
+            console.log(body);
+            const response = await api.post("/auth/login", body);
             let user = response.data['id'];
             console.log(user);
             if (user) {
