@@ -9,11 +9,11 @@ const Profile = () => {
     const [userInfo, setUserInfo] = useState({});
     const [edit, setEdit] = useState(false);
     const [loading, setLoading] = useState(true);
-    const userId = AuthData.user.userId;
+    const userId = AuthData.userId;
     // console.log(userId);
     const getUserInfo = async () => {
         try {
-            const response = await api.get(`/auth/user_info/${AuthData.user.userId}`);
+            const response = await api.get(`/auth/user_info/${AuthData.userId}`);
             // console.log(response.data);
             setUserInfo(response.data);
             setLoading(false);

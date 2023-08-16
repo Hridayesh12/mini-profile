@@ -4,7 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import Image from 'next/image';
 const Connections = () => {
     const AuthData = useAuth();
-    const userId = AuthData.user.userId;
+    const userId = AuthData.userId;
     // console.log(AuthData);
     const [conn, setConn] = useState([]);
     const [otherConn, setOtherConn] = useState([]);
@@ -38,7 +38,7 @@ const Connections = () => {
     }
     const getUserInfo = async () => {
         try {
-            const response = await api.get(`/auth/user_info/${AuthData.user.userId}`);
+            const response = await api.get(`/auth/user_info/${AuthData.userId}`);
             setUserInfo(response.data);
             setLoading(false);
             if (response.status === 200) {

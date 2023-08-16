@@ -29,10 +29,8 @@ const AuthProvider = ({ children }) => {
     }, [setIsAuthenticated]);
 
     const value = {
-        user: {
-            isAuthenticated: isAuthenticated,
-            userId: userId,
-        },
+        isAuthenticated,
+        userId,
         setUserId,
         setIsAuthenticated,
         logout,
