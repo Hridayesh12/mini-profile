@@ -29,9 +29,11 @@ function Login() {
                 password: password,
             }
             console.log(body);
-            const response = await AuthData.login(body);
+            const response = await api.post("/auth/login", body);
             console.log(response);
             if (response.status == 200) {
+                AuthData.setIsAuthenticated(true);
+                AuthData.setUserId(response.data.user_id);
                 Swal.fire({
                     icon: "success",
                     title: "Logged In",

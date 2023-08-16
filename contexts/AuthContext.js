@@ -21,22 +21,6 @@ const AuthProvider = ({ children }) => {
         }
     };
 
-    const login = async (body) => {
-        try {
-            console.log(body);
-            const response = await api.post("/auth/login", body);
-            let user = response.data['user'];
-            console.log(user);
-            if (user) {
-                setUserId(user);
-                setIsAuthenticated(true);
-                res.status(200);
-            }
-        } catch (error) {
-            console.error("Login failed:", error);
-        }
-    };
-
 
     useEffect(() => {
         if (!setIsAuthenticated) {
@@ -49,6 +33,8 @@ const AuthProvider = ({ children }) => {
             isAuthenticated: isAuthenticated,
             userId: userId,
         },
+        setUserId,
+        setIsAuthenticated,
         login,
         logout,
     };
