@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import api from '../contexts/adapter';
 import { useAuth } from '../contexts/AuthContext';
-
+import Image from 'next/image';
 const Connections = () => {
     const AuthData = useAuth();
     const userId = AuthData.user.userId;
@@ -120,7 +120,7 @@ const Connections = () => {
                                     </button>
                                 </div>
                                 <div className='flex flex-row items-center'>
-                                    <img
+                                    <Image
                                         className="rounded-full w-[100px] h-[100px] mr-2"
                                         src={item?.pic == '' ? 'https://tse1.mm.bing.net/th?id=OIP.25iSkbJTm4F-Rq0g1JR8NgHaHa&pid=Api&P=0&h=180' : `${item?.pic}`}
                                         alt="profilePic"
@@ -152,7 +152,7 @@ const Connections = () => {
                                                 </button>
                                             </div>
                                             <div className='flex flex-row items-center'>
-                                                <img
+                                                <Image
                                                     className="rounded-full w-[100px] h-[100px] mr-2"
                                                     src={item?.pic == '' ? 'https://tse1.mm.bing.net/th?id=OIP.25iSkbJTm4F-Rq0g1JR8NgHaHa&pid=Api&P=0&h=180' : `${item?.pic}`}
                                                     alt="profilePic"

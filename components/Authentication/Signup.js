@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2';
 import api from '../../contexts/adapter';
+import Image from 'next/image';
 function SignUp() {
     const router = useRouter();
     const [firstname, setFName] = useState('');
@@ -84,7 +85,7 @@ function SignUp() {
         <div className='bg-gray-100 min-h-screen flex items-center justify-center'>
             <div className=' bg-violet-200 flex rounded-2xl shadow-lg max-w-3xl p-4'>
                 <div className='w-1/2 sm:block hidden'>
-                    <img
+                    <Image
                         className='rounded-2xl'
                         src={`/signup.jpg`}
                         alt={`logo`}

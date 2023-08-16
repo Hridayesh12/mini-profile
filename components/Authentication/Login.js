@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '../../contexts/AuthContext';
 import api from '../../contexts/adapter';
+import Image from 'next/image';
 import Swal from 'sweetalert2';
 function Login() {
     const router = useRouter();
@@ -103,7 +104,7 @@ function Login() {
                     </div>
                 </div>
                 <div className='w-1/2 sm:block hidden'>
-                    <img
+                    <Image
                         className='rounded-2xl'
                         src={`/login.jpg`}
                         alt={`logo`}

@@ -1,5 +1,5 @@
 import axios from 'axios';
-const SERVER = 'http://localhost:5000';
+const SERVER = 'https://mini-profile-backend.onrender.com';
 
 let api = axios.create({
     baseURL: SERVER,

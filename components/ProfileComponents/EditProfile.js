@@ -1,6 +1,7 @@
 import { useState } from "react";
 import api from "../../contexts/adapter";
 import Swal from "sweetalert2";
+import Image from "next/image";
 const EditProfile = ({ userInfo, edit, setEdit, setUserInfo }) => {
     // console.log(userInfo);
     const [disableBtn, setdisableBtn] = useState(false);
@@ -42,7 +43,7 @@ const EditProfile = ({ userInfo, edit, setEdit, setUserInfo }) => {
                 <div className='w-full flex flex-col px-3'>
                     <div className='flex flex-wrap flex-col-reverse md:flex-row items-center justify-around mb-5'>
                         <div className="w-full md:flex-1 mt-1 flex items-center  justify-between relative text-black">
-                            <img
+                            <Image
                                 className="rounded-full w-[100px] h-[100px] mr-2"
                                 src={userInfo?.pic ? `${userInfo?.pic}` : 'https://tse1.mm.bing.net/th?id=OIP.25iSkbJTm4F-Rq0g1JR8NgHaHa&pid=Api&P=0&h=180'}
                                 alt="profilePic"
