@@ -33,7 +33,7 @@ function Login() {
             console.log(response);
             if (response.status == 200) {
                 AuthData.setIsAuthenticated(true);
-                AuthData.setUserId(response.data.user_id);
+                AuthData.setUserId(response.data.user);
                 Swal.fire({
                     icon: "success",
                     title: "Logged In",
