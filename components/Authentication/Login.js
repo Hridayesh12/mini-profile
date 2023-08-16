@@ -29,10 +29,10 @@ function Login() {
                 password: password,
             }
             const response = await api.post(`/auth/login`, body)
-            // console.log(response);
+            console.log(response);
             if (response.status == 200) {
                 const respp = await AuthData.login();
-                // console.log(respp);
+                console.log(respp);
                 if (respp) {
                     Swal.fire({
                         icon: "success",
