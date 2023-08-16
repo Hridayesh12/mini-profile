@@ -28,19 +28,17 @@ function Login() {
                 email: email,
                 password: password,
             }
-            const respp = await AuthData.login(body);
+            console.log(body);
+            const response = await AuthData.login(body);
             console.log(response);
             if (response.status == 200) {
-                console.log(respp);
-                if (respp) {
-                    Swal.fire({
-                        icon: "success",
-                        title: "Logged In",
-                        showConfirmButton: false,
-                        timer: 1500,
-                    });
-                    router.push('/dashboard/profile');
-                }
+                Swal.fire({
+                    icon: "success",
+                    title: "Logged In",
+                    showConfirmButton: false,
+                    timer: 1500,
+                });
+                router.push('/dashboard/profile');
             }
             else {
                 Swal.fire({
