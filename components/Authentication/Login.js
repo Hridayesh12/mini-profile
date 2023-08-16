@@ -99,7 +99,7 @@ function Login() {
                         < hr className='border-violet-500' /><p className='text-center text-sm'>OR</p>< hr className='border-violet-500' />
                     </div>
                     <div className='mt-3 text-xs flex justify-between items-center'>
-                        <p className='text-xs'>Don't Have An Account ?&nbsp;</p>
+                        <p className='text-xs'>Don't Have An Account ?`&nbsp;`</p>
                         <button className='py-2 px-5 bg-white border rounded-xl cursor-pointer hover:bg-violet-300' onClick={() => router.push('/signup')}>Register</button>
                     </div>
                 </div>

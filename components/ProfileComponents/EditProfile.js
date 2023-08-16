@@ -206,13 +206,13 @@ const EditProfile = ({ userInfo, edit, setEdit, setUserInfo }) => {
                                         </div>
                                         <div className="flex flex-col lg:flex-row">
                                             <div className="w-full flex flex-row items-center justify-between lg:justify-around flex-wrap mb-2">
-                                                <h3 className="">From &nbsp;:&nbsp;</h3>
+                                                <h3 className="">From `&nbsp;`:`&nbsp;`</h3>
                                                 <input type='month' placeholder="From" value={education.start_year} className="border-2 border-gray-400 rounded-lg p-1"
                                                     onChange={(e) => { setUserInfo({ ...userInfo, ...userInfo, education: userInfo?.education?.map((education, i) => i === index ? { ...education, start_year: e.target.value } : education) }) }}
                                                 />
                                             </div>
                                             <div className="w-full flex flex-row items-center justify-between lg:justify-around flex-wrap mb-2 ">
-                                                <h3 className="">To &nbsp;:&nbsp;</h3>
+                                                <h3 className="">To `&nbsp;`:`&nbsp;`</h3>
                                                 <input type='month' placeholder="To" value={education.end_year} className="border-2 border-gray-400 rounded-lg p-1"
                                                     onChange={(e) => { setUserInfo({ ...userInfo, ...userInfo, education: userInfo?.education?.map((education, i) => i === index ? { ...education, end_year: e.target.value } : education) }) }}
                                                 />

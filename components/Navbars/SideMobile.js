@@ -38,7 +38,7 @@ const SideMobile = () => {
 
                     </button>
                     <div className="flex flex-row items-center">
-                        &nbsp;&nbsp;
+                        `&nbsp;``&nbsp;`
                         <button
                             className="flex items-center"
                             onClick={() => setIsOpen(!isOpen)}
@@ -142,7 +142,7 @@ const SideMobile = () => {
                                     clipRule="evenodd"
                                 />
                             </svg>
-                            &nbsp;&nbsp; Log Out
+                            `&nbsp;``&nbsp;` Log Out
                         </div>
                     </Link>
                 </aside>

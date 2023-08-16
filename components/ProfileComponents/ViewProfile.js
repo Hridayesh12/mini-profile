@@ -32,7 +32,7 @@ const ViewProfile = ({ userInfo, edit, setEdit }) => {
                         <div className='w-full md:flex-1 flex flex-col gap-3'>
                             <div className="flex flex-col border-2 border-slate-300 shadow-xl rounded-lg m-2 p-2">
                                 <h2 className="font-md text-gray-700 font-normal mb-1 mt-3">Your Name</h2>
-                                <h3 className="font-md text-gray-700 font-bold mb-3">{userInfo?.firstname}&nbsp;{userInfo?.lastname}</h3>
+                                <h3 className="font-md text-gray-700 font-bold mb-3">{userInfo?.firstname}`&nbsp;`{userInfo?.lastname}</h3>
                                 <h2 className="font-md text-gray-700 font-normal mb-1">Email</h2>
                                 <h3 className="font-md text-gray-700 font-bold mb-3">{userInfo?.email}</h3>
                                 <h2 className="font-md text-gray-700 font-normal mb-1">Phone Number</h2>
